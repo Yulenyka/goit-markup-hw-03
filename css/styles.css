@@ -35,14 +35,11 @@ body {
     width: 1200px;
 		padding-left: 15px;
 		padding-right: 15px;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
-}
-.section.irregular {
-	padding-top: 0;
 }
 .h2 {
     font-size: 36px;
@@ -52,10 +49,12 @@ body {
 
 /* Button */
 [type=button] {
-	margin: o;
+	margin: 0;
 	padding: 0;
 }
 .btn {
+	  /* display: inline-block; */
+		padding: 6px 24px;
     font-family: inherit;
     font-size: inherit;
     line-height: 1.62;
@@ -73,11 +72,7 @@ body {
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.btn--active {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: 1.62;
-    font-weight: 500;
+.btn.active {
     color: var(--secondary-white-color);
     border: none;
     border-radius: 4px;
@@ -117,7 +112,7 @@ body {
 	  margin-left: auto;
 }
 .nav .item + .item {
-	margin-left: 50px;
+	  margin-left: 50px;
 }
 .site-nav {
 	  display: block;
@@ -159,7 +154,7 @@ body {
 		text-align: center;
 }
 .headerbar-titlle {
-	margin-bottom: 30px;
+	  margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -188,7 +183,11 @@ body {
 }
 .titlle-transparent {
     opacity: 0;
+		margin-top: -25px;
 }
+
+/* Feature */
+
 .feature {
 	display: flex;
 }
@@ -196,7 +195,7 @@ body {
 	margin-left: 50px;
 }
 .feature-titlle {
-	margin-bottom: 10px;
+	  margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -206,14 +205,51 @@ body {
     line-height: 1.71;
     color: var(--fundamental-text-color);
 }
+
+/* Чим ми займаємося */
+
+.section.irregular {
+	padding-top: 0;
+	text-align: center;
+}
+.h2-trend {
+	margin-bottom: 50px;
+}
+.trend {
+	display: flex;
+}
+.trend .item+.item {
+	margin-left: 30px;
+}
+
 /* Team */
+.section.team {
+	background: var(--primery-white-color);
+}
+.h2-team {
+	margin-bottom: 50px;
+}
 .team {
+	  display: flex;
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
     list-style: none;
 }
+.team .item {
+	  background: #FFFFFF;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+		border-radius: 0px 0px 4px 4px;
+}
+.team .item+.item {
+	margin-left: 30px;
+}
+.team-content {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
 .team-titlle {
+		margin-bottom: 10px;
     font-size: 16px;
     font-weight: 500;
 }
@@ -226,10 +262,31 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 }
+.project-button {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.project-button .item + .item {
+    margin-left: 8px;
+}
 .project .item {
-	/* width: 370px; */
+	  width: calc((100% - 60px) / 3);
+		margin-right: 30px;
+		margin-bottom: 30px;
+		/* border: 1px solid #EEEEEE; */
+}
+.project .item:nth-child(3n) {
+	  margin-right: 0;
+}
+.project .item:nth-last-child(-n+3) {
+	margin-bottom: 0;
+}
+.project-content {
+	margin: 20px 24px;
 }
 .project-titlle {
+	  margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -257,7 +314,7 @@ body {
     font-style: normal;
 }
 .footer-contact {
-	padding-top: 9px;
+	  margin-top: 9px;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 }
