@@ -14,37 +14,44 @@ body {
     color: var(--primery-text-color);
     background-color: var(--secondary-white-color);
   }
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
 		margin-top: 0;
 		margin-bottom: 0;
-	}
-	ul {
+}
+ul {
 		padding: 0;
 		margin: 0;
 		list-style: none;
-	}
-  .container {
+}
+.container {
     margin-left: auto;
     margin-right: auto;
     width: 1200px;
 		padding-left: 15px;
 		padding-right: 15px;
-    /* outline: 2px solid tomato; */
+    outline: 2px solid tomato;
 }
 .section {
-	padding-top: 94px;
-	padding-bottom: 94px;
+	  padding-top: 94px;
+	  padding-bottom: 94px;
 }
-.h2 {
+.section.no-padding {
+	  padding-top: 0;
+}
+h2 {
+		margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
+}
+.titlle-transparent {
+	display: none;
 }
 
 /* Button */
@@ -53,8 +60,7 @@ body {
 	padding: 0;
 }
 .btn {
-	  /* display: inline-block; */
-		padding: 6px 24px;
+		padding: 6px 22px;
     font-family: inherit;
     font-size: inherit;
     line-height: 1.62;
@@ -73,6 +79,7 @@ body {
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn.active {
+	  padding: 6px 25px;
     color: var(--secondary-white-color);
     border: none;
     border-radius: 4px;
@@ -88,11 +95,12 @@ body {
 		display: flex;
 	}
 .logo {
-	  margin-right: 93px;
+		margin-right: 93px;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 26px;
-    line-height: 1.2;
+    line-height: 1.17;
+		letter-spacing: 0.03em;
     text-decoration: none;
     color: var(--secondary-text-color);
 }
@@ -104,7 +112,7 @@ body {
 		align-items: center;
     font-weight: 500;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     list-style: none;
 }
@@ -181,18 +189,17 @@ body {
 .headerbar-btn:active {
     background: #188CE8;
 }
-.titlle-transparent {
-    opacity: 0;
-		margin-top: -25px;
-}
 
 /* Feature */
 
 .feature {
-	display: flex;
+	  display: flex;
+}
+.feature .item {
+		width: 270px;
 }
 .feature .item + .item{
-	margin-left: 50px;
+	margin-left: 30px;
 }
 .feature-titlle {
 	  margin-bottom: 10px;
@@ -208,13 +215,6 @@ body {
 
 /* Чим ми займаємося */
 
-.section.irregular {
-	padding-top: 0;
-	text-align: center;
-}
-.h2-trend {
-	margin-bottom: 50px;
-}
 .trend {
 	display: flex;
 }
@@ -226,15 +226,10 @@ body {
 .section.team {
 	background: var(--primery-white-color);
 }
-.h2-team {
-	margin-bottom: 50px;
-}
 .team {
 	  display: flex;
-    font-size: 16px;
-    line-height: 1.19;
     text-align: center;
-    list-style: none;
+		line-height: 0;
 }
 .team .item {
 	  background: #FFFFFF;
@@ -247,13 +242,15 @@ body {
 .team-content {
 	margin-top: 30px;
 	margin-bottom: 30px;
+	line-height: 1.17;
 }
 .team-titlle {
+		font-size: 16px;
 		margin-bottom: 10px;
-    font-size: 16px;
     font-weight: 500;
 }
 .team-text {
+	  font-size: 16px;
     color: var(--fundamental-text-color);
 }
 
@@ -271,10 +268,10 @@ body {
     margin-left: 8px;
 }
 .project .item {
-	  width: calc((100% - 60px) / 3);
-		margin-right: 30px;
-		margin-bottom: 30px;
-		/* border: 1px solid #EEEEEE; */
+    width: calc((100% - 60px) / 3);
+	  margin-right: 30px;
+	  margin-bottom: 30px;
+		line-height: 0;
 }
 .project .item:nth-child(3n) {
 	  margin-right: 0;
@@ -283,13 +280,15 @@ body {
 	margin-bottom: 0;
 }
 .project-content {
-	margin: 20px 24px;
+	padding: 20px 24px;
+	border: 1px solid #EEEEEE;
 }
 .project-titlle {
 	  margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+		text-align: inherit;
 }
 .project-text {
     font-size: 16px;
@@ -307,18 +306,20 @@ body {
     color: var(--sub-text-color);
 }
 .footer-address {
-	  padding-top: 20px;
+		margin-top: 20px;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
 }
 .footer-contact {
+	  display: block;
 	  margin-top: 9px;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 }
 .footer-map {
+		display: block;
     text-decoration: none;
     color: var(--sub-text-color);
 }
