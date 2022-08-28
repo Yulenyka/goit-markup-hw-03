@@ -35,7 +35,7 @@ ul {
     width: 1200px;
 		padding-left: 15px;
 		padding-right: 15px;
-    outline: 2px solid tomato;
+    /* outline: 2px solid tomato; */
 }
 .section {
 	  padding-top: 94px;
@@ -43,6 +43,9 @@ ul {
 }
 .section.no-padding {
 	  padding-top: 0;
+}
+.card-image.no-gap {
+	display: block;
 }
 h2 {
 		margin-bottom: 50px;
@@ -229,7 +232,6 @@ h2 {
 .team {
 	  display: flex;
     text-align: center;
-		line-height: 0;
 }
 .team .item {
 	  background: #FFFFFF;
@@ -271,7 +273,6 @@ h2 {
     width: calc((100% - 60px) / 3);
 	  margin-right: 30px;
 	  margin-bottom: 30px;
-		line-height: 0;
 }
 .project .item:nth-child(3n) {
 	  margin-right: 0;
